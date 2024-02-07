@@ -28,7 +28,9 @@
 </div>
   </div>
   <script>
-  var $messages = $('.messages-content'),
+
+    var messageSound = new Audio('pop.mp4');
+var $messages = $('.messages-content'),
     d, h, m,
     i = 0;
 
@@ -38,7 +40,6 @@ $(window).load(function() {
     fakeMessage();
   }, 500);
 });
-
 
 function updateScrollbar() {
   $messages.mCustomScrollbar("update").mCustomScrollbar('scrollTo', 'bottom', {
@@ -97,7 +98,6 @@ var Fake = [
   'lo siento, nuestro tiempo a terminado',
   'tchao',
   '😔',
-  
 ]
 
 function fakeMessage() {
@@ -114,7 +114,6 @@ function fakeMessage() {
     updateScrollbar();
     i++;
   }, 1500 + (Math.random() * 20) * 100);
-
 }
 
 $('.button').click(function(){
